@@ -2,6 +2,7 @@ from django.db import models
 from pacientes.models import Pacientes
 # Create your models here.
 
+
 class Agendamentos(models.Model):
     id_agendamento = models.AutoField(primary_key=True)
     data_hora = models.DateTimeField(blank=False, null=False)
