@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from pacientes.models import Pacientes
-from agendamentos.api.serializers import AgendamentosSerializer
+from agendamentos.api.serializers import AgendamentosDetalhesSerializer
 
 
 class PacientesSerializer(serializers.ModelSerializer):
@@ -10,7 +10,7 @@ class PacientesSerializer(serializers.ModelSerializer):
 
 
 class PacientesDetalhesSerializer(serializers.ModelSerializer):
-    agendamentos = AgendamentosSerializer(many=True, read_only=True)
+    agendamentos = AgendamentosDetalhesSerializer(many=True, read_only=True)
 
     class Meta:
         model = Pacientes
